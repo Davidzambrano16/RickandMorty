@@ -19,7 +19,7 @@ body{
 .header{
   overflow: hidden;
   width: 100vw;
-  height: 50vh;
+  height: 35vh;
   background-image: url("https://s3-alpha-sig.figma.com/img/f757/e216/34f8ffb34b0055d2a2a34bc10390c23c?Expires=1663545600&Signature=Wx9kym7YRXDcrXkXdRrFarWh9EAw0cBt45s7eBURJ7f6X4MMalsd9B2RFTYc3jmbkkLAvQzPNPA-A84I9xfgyxO192hpEyBrIJ0c2~LXtlq95gDOnSR5HuxQswa98vZtpPsCxTTTHVuD2j~p~dZU-fgL019JhZIB4f7oElCp-tUStLxdgnT2KbjOWZKVZkY7lFfxbAXnvqnC~xJMSICoZ-BKJWqLsJc5jSvsFAudVtLI1BGln4pkgQmpXwUsb00L5tNiPun32WKsSIXWEFUv44mrYuA-e1QFsMEJcXXtNPhChmA3IKaTq4SuVw0cdtm9cFZoehelTrrP2BzxzjL19g__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
   background-position:center;
   background-repeat: no-repeat;
