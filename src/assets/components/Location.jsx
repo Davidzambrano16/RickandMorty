@@ -43,12 +43,14 @@ const Location = () => {
             </header>
 
             <section className='infoCard'>
-                <h3>{location.name}</h3>
-                <ul>
-                    <li>type: {location.type} </li>
-                    <li>dimension: {location.dimension} </li>
-                    <li>populations: {location.residents?.length} </li>
-                </ul>
+                    <h2>name:</h2>
+                    <h2>type:</h2>
+                    <h2>dimension: </h2>
+                    <h2>populations:</h2>
+                    <h3>{location.name}</h3>
+                    <h3>{location.type} </h3>
+                    <h3>{location.dimension} </h3>
+                    <h3>{location.residents?.length} </h3>
             </section>
 
             <ul className='main'>
