@@ -38,6 +38,7 @@ const Location = () => {
                 isLoading ? (
                     <div className='loading'>
                         <h1>is loading...</h1>
+                        <img className='loading--img' src=".../assets/images/rickPepino.png" alt="" />
                     </div>
                 ) : (
                     <div className='location'>
