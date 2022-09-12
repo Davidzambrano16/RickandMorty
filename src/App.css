@@ -147,7 +147,7 @@ body{
 .status{
   display: flex;
   background-color: #05292e;
-  border-radius: 5px;
+  border-radius: 0px 5px 5px 0px;
   width: 15%;
   position: absolute;
   margin-top: 0.7rem;
