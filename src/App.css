@@ -129,8 +129,13 @@ body{
 
 .card{
   background-color: #062226;
-  width: 95%;
-  padding: 10px;
+  width: 100%;
+  font-size: 0.8rem;
+}
+
+.text--card{
+  margin-left: 0.2rem;
+  margin-right: 0.1rem;
 }
 
 .img--card{

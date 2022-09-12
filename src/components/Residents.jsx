@@ -14,7 +14,7 @@ const Residents = ({ character }) => {
     return (
         <div className='card'>
             <img className='img--card' src={residents.image} alt="" />
-            <div className='card-text'>
+            <div className='text--card'>
                 <h3> {residents.name} </h3>
                 <hr />
                 <br />

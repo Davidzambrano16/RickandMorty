@@ -23,14 +23,11 @@ const Location = () => {
 
     const max = Math.ceil(location.residents?.length / porPagina)
 
-    console.log(max)
-
-    console.log(location)
-
     const typeChange = () => {
         axios.get(`https://rickandmortyapi.com/api/location/${textId}`)
             .then(res => setLocation(res.data));
     }
+
 
     return (
         <div className='container'>
@@ -38,7 +35,7 @@ const Location = () => {
                 isLoading ? (
                     <div className='loading'>
                         <h1>is loading...</h1>
-                        <img className='loading--img' src=".../assets/images/rickPepino.png" alt="" />
+                        <img className='loading--img' src="" alt="" />
                     </div>
                 ) : (
                     <div className='location'>
@@ -48,10 +45,14 @@ const Location = () => {
                                 <input
                                     className='input--header'
                                     placeholder='type a location id 1-126'
+                                    list='location'
                                     type="text"
                                     value={textId}
                                     onChange={e => setTextId(e.target.value)}
                                 />
+                                <datalist>
+
+                                </datalist>
                                 <button
                                     className='button--header'
                                     onClick={typeChange}>
