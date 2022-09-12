@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 const Paginacion = ({ pagina, setPagina, max }) => {
+    // estado para recibir evento del input
     const [input, setInput] = useState(1)
 
     const nextPage = () => {
@@ -15,7 +16,6 @@ const Paginacion = ({ pagina, setPagina, max }) => {
 
     const onKeyDown = e => {
         if (e.keyCode == 13) {
-            console.log(e.target.value)
             setPagina(parseInt(e.target.value))
 
             if (e.target.value < 1 ||

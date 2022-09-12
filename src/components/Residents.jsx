@@ -18,7 +18,7 @@ const Residents = ({ character }) => {
                 <h3> {residents.name} </h3>
                 <hr />
                 <br />
-                <h4>RACE</h4>
+                <h4>SPECIES</h4>
                 <h3> {residents.species} </h3>
                 <br />
                 <h4>ORIGIN</h4>
