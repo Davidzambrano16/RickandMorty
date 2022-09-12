@@ -98,7 +98,7 @@ body{
   height: 12vh;
   color: white;
   text-align: center;
-  font-size: 0.4rem;
+  font-size: 0.7rem;
   padding: 0.5rem 0.2rem;
   overflow: hidden;
   display: grid;
@@ -123,12 +123,15 @@ body{
 .card{
   background-color: #062226;
   width: 95%;
+  padding: 10px;
 }
 
 .img--card{
   width: 100%;
   text-align: center;
 }
+
+
 
 .listPage{
   display: flex;
