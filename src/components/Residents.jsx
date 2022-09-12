@@ -13,15 +13,19 @@ const Residents = ({ character }) => {
     return (
         <div className='card'>
             <img className='img--card' src={residents.image} alt="" />
-            <div>
+            <div className='card-text'>
                 <h3> {residents.name} </h3>
                 <hr />
-                <h4>raza</h4>
+                <br />
+                <h4>RACE</h4>
                 <h3> {residents.species} </h3>
-                <h4>origen</h4>
+                <br />
+                <h4>ORIGIN</h4>
                 <h3> {residents.origin?.name} </h3>
-                <h4>cantidad de episodios donde aparece</h4>
+                <br />
+                <h4>APPARENCE IN EPISODES</h4>
                 <h3> {residents.episode?.length} </h3>
+                <br />
             </div>
         </div>
     );
