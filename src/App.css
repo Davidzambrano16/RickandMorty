@@ -9,6 +9,22 @@ body{
   background-color: #05292e;
 }
 
+h1{
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+h3{
+  color: white;
+}
+
+h4{
+  color: gray;
+}
+
+
 .location{
   display: flex;
   flex-direction: column;
@@ -51,6 +67,7 @@ body{
 .button--header{
   width: 10%;
   height: 40%;
+  cursor: pointer;
 }
 
 .infoCard{
@@ -91,10 +108,40 @@ body{
   text-align: center;
 }
 
-h3{
-  color: white;
+.listPage{
+  display: flex;
+  width: 100vw;
+  height: 5vh;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
 }
 
-h4{
-  color: gray;
+.buttonPreviousPage, .buttonNextPage{
+  background-color: #062226;
+  color: white;
+  font-size: 1rem;
+  width: 20%;
+  cursor: pointer;
+}
+
+.inputPage{
+  width: 15%;
+  height: 100%;
+  text-align: center;
+}
+
+.textPage{
+  color: white;
+  font-size: 1.2rem;
+}
+
+.footer{
+  width: 100vw;
+  height: 45vh;
+  margin-top: 2rem;
+  background-image: url("./assets/images/rickAndMorty.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }

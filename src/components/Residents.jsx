@@ -10,8 +10,6 @@ const Residents = ({ character }) => {
             .then(res => setResidents(res.data))
     }, [] )
 
-    console.log(residents)
-
     return (
         <div className='card'>
             <img className='img--card' src={residents.image} alt="" />
