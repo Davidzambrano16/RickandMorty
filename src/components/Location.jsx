@@ -91,7 +91,7 @@ const Location = () => {
                             {
                                 location.residents.length === 0 ?
                                     ( <div className='notResidents'>
-                                        <h2>no hay habitantes en esta localizacion</h2>
+                                        <h2>there are no inhabitants in this location</h2>
                                         <img className='notResidents--img' src='https://media.giphy.com/media/tJqyalvo9ahykfykAj/giphy.gif' alt="" />
                                     </div> 
                                     ) : (
