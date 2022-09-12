@@ -9,7 +9,7 @@ const Location = () => {
     const [textId, setTextId] = useState("")
     const [isLoading, setIsLoading] = useState(true)
 
-    const [pagina, setPagina] = useState(1) 
+    const [pagina, setPagina] = useState(1)
     const [porPagina, setPorPagina] = useState(8)
 
     useEffect(() => {
@@ -19,11 +19,10 @@ const Location = () => {
                 setLocation(res.data)
                 setIsLoading(false)
             });
-
-    }, []);
+    }, [])
 
     const max = Math.ceil(location.residents?.length / porPagina)
-    
+
     console.log(max)
 
     console.log(location)
@@ -34,10 +33,12 @@ const Location = () => {
     }
 
     return (
-        <div>
+        <div className='container'>
             {
                 isLoading ? (
-                    <h1>is loading...</h1>
+                    <div className='loading'>
+                        <h1>is loading...</h1>
+                    </div>
                 ) : (
                     <div className='location'>
                         <header className='header'>
@@ -53,7 +54,7 @@ const Location = () => {
                                 <button
                                     className='button--header'
                                     onClick={typeChange}>
-                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <i className="fa-solid fa-magnifying-glass"></i>
                                 </button>
                             </div>
                         </header>
@@ -71,22 +72,27 @@ const Location = () => {
 
                         <ul className='main'>
                             {
-                                location.residents?.slice(
-                                    (pagina - 1) * porPagina,
-                                    (pagina - 1) * porPagina + porPagina
-                                ).map(character => (
-                                    <Residents character={character} key={character} />
-                                ))
+                                location.residents.length === 0 ?
+                                    ( <div className='notResidents'>
+                                        <h2>no hay habitantes en esta localizacion</h2>
+                                        <img className='notResidents--img' src='https://media.giphy.com/media/tJqyalvo9ahykfykAj/giphy.gif' alt="" />
+                                    </div> 
+                                    ) : (
+                                        location.residents?.slice(
+                                            (pagina - 1) * porPagina,
+                                            (pagina - 1) * porPagina + porPagina
+                                        ).map(character => (
+                                            <Residents character={character} key={character} />
+                                        ))
+                                    )
                             }
                         </ul>
 
                         <Paginacion pagina={pagina} setPagina={setPagina} max={max} />
-
                         <footer className='footer'></footer>
                     </div>
                 )
-            }
-
+            };
         </div>
     );
 };

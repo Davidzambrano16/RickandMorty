@@ -5,27 +5,50 @@
   list-style: none;
 }
 
+h3,h4{
+  color: white;
+}
+
 body{
   background-color: #05292e;
+  margin: 0;
 }
 
-h1{
+.loading{
+  height: 100vh;
+  width: 100vw;
   color: white;
-  font-size: 50px;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notResidents{
+  font-size: 0.4rem;
   text-align: center;
-  margin: 0 auto;
-}
-
-h3{
+  grid-column-start: 1;
+  grid-column-end: 3;
   color: white;
+  height: 100%;
+  width: 100%;
 }
 
-h4{
-  color: gray;
+.notResidents--img{
+  margin: 0.2rem;
+  width: 100%;
+  height: 98%;
 }
 
+.container{
+  display: flex;
+  justify-content: end;
+}
 
 .location{
+  overflow: hidden;
+  width: 98.5vw;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,8 +56,7 @@ h4{
 }
 
 .header{
-  overflow: hidden;
-  width: 100vw;
+  width: 98.5vw;
   height: 35vh;
   background-image: url("https://s3-alpha-sig.figma.com/img/f757/e216/34f8ffb34b0055d2a2a34bc10390c23c?Expires=1663545600&Signature=Wx9kym7YRXDcrXkXdRrFarWh9EAw0cBt45s7eBURJ7f6X4MMalsd9B2RFTYc3jmbkkLAvQzPNPA-A84I9xfgyxO192hpEyBrIJ0c2~LXtlq95gDOnSR5HuxQswa98vZtpPsCxTTTHVuD2j~p~dZU-fgL019JhZIB4f7oElCp-tUStLxdgnT2KbjOWZKVZkY7lFfxbAXnvqnC~xJMSICoZ-BKJWqLsJc5jSvsFAudVtLI1BGln4pkgQmpXwUsb00L5tNiPun32WKsSIXWEFUv44mrYuA-e1QFsMEJcXXtNPhChmA3IKaTq4SuVw0cdtm9cFZoehelTrrP2BzxzjL19g__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
   background-position:center;
@@ -74,7 +96,6 @@ h4{
   background-color: #062226;
   width: 80%;
   height: 12vh;
-  margin: auto auto;
   color: white;
   text-align: center;
   font-size: 0.4rem;
@@ -85,14 +106,15 @@ h4{
   grid-template-rows: 1fr 1fr;
   column-gap: 0.2rem;
   margin-top: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .main{
-  margin: auto auto;
-  margin: 1.5rem;
+  overflow: hidden;
   width: 80vw;
   display: grid;
+  justify-content: center;
+  align-items: center;
   grid-template-columns: 1fr 1fr;
   grid-row: 1fr 1fr 1fr 1fr;
   gap: 2rem;
@@ -110,8 +132,9 @@ h4{
 
 .listPage{
   display: flex;
-  width: 100vw;
+  width: 98vw;
   height: 5vh;
+  margin-top: 2rem;
   justify-content: center;
   align-items: center;
   gap: 0.7rem;
@@ -127,7 +150,7 @@ h4{
 
 .inputPage{
   width: 15%;
-  height: 100%;
+  height: 70%;
   text-align: center;
 }
 
@@ -137,11 +160,11 @@ h4{
 }
 
 .footer{
-  width: 100vw;
-  height: 45vh;
-  margin-top: 2rem;
-  background-image: url("./assets/images/rickAndMorty.gif");
+  width: 98.5vw;
+  height: 30vh;
+  position: relative;
+  background-image: url("./assets/images/rick.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 60% 100%;
 }

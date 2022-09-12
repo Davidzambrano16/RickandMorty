@@ -4,13 +4,21 @@ const Paginacion = ({ pagina, setPagina, max }) => {
     const [input, setInput] = useState(1)
 
     const nextPage = () => {
-        setInput(input + 1)
-        setPagina(pagina + 1)
+        if (pagina => max) {
+            alert("error..")
+        } else {
+            setInput(input + 1)
+            setPagina(pagina + 1)
+        }
     }
 
     const previousPage = () => {
-        setInput(input - 1)
-        setPagina(pagina - 1)
+        if (pagina <= max) {
+            alert("error..")
+        } else {
+            setInput(input + 1)
+            setPagina(pagina + 1)
+        }
     }
 
     const onKeyDown = e => {
@@ -21,10 +29,10 @@ const Paginacion = ({ pagina, setPagina, max }) => {
             if (e.target.value < 1 ||
                 e.target.value > max ||
                 isNaN(e.target.value)
-                ) {
-                    setPagina(1);
-                    setInput(1);
-                    alert("error.. wrong number")
+            ) {
+                setPagina(1);
+                setInput(1);
+                alert("error.. wrong number")
             } else {
                 setPagina(parseInt(e.target.value))
             }
@@ -41,7 +49,7 @@ const Paginacion = ({ pagina, setPagina, max }) => {
             <button
                 className='buttonPreviousPage'
                 onClick={previousPage}>
-                <i class="fa-solid fa-backward"></i>
+                <i className="fa-solid fa-backward"></i>
             </button>
             <input
                 type="text"
@@ -54,7 +62,7 @@ const Paginacion = ({ pagina, setPagina, max }) => {
             <button
                 className='buttonNextPage'
                 onClick={nextPage}>
-                <i class="fa-solid fa-forward"></i>
+                <i className="fa-solid fa-forward"></i>
             </button>
 
         </div>

@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { Axios } from 'axios';
 import React, { useEffect, useState } from 'react';
 
 const Residents = ({ character }) => {
