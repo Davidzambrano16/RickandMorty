@@ -4,21 +4,13 @@ const Paginacion = ({ pagina, setPagina, max }) => {
     const [input, setInput] = useState(1)
 
     const nextPage = () => {
-        if (pagina => max) {
-            alert("error..")
-        } else {
-            setInput(input + 1)
-            setPagina(pagina + 1)
-        }
+            setInput (input+1);
+            setPagina (pagina+1);
     }
 
     const previousPage = () => {
-        if (pagina <= max) {
-            alert("error..")
-        } else {
-            setInput(input + 1)
-            setPagina(pagina + 1)
-        }
+            setInput (input - 1);
+            setPagina (pagina - 1);
     }
 
     const onKeyDown = e => {
@@ -48,7 +40,8 @@ const Paginacion = ({ pagina, setPagina, max }) => {
 
             <button
                 className='buttonPreviousPage'
-                onClick={previousPage}>
+                disabled={pagina === 1 || pagina < 1}                
+                onClick={previousPage} >
                 <i className="fa-solid fa-backward"></i>
             </button>
             <input
@@ -61,7 +54,8 @@ const Paginacion = ({ pagina, setPagina, max }) => {
             <p className='textPage'>de {max} </p>
             <button
                 className='buttonNextPage'
-                onClick={nextPage}>
+                disabled={pagina === max || pagina > max}
+                onClick={nextPage} >
                 <i className="fa-solid fa-forward"></i>
             </button>
 
